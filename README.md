@@ -1,9 +1,33 @@
+# Fork Description
+
+This is a fork of the [bulma-clean-theme] repository of [CS Rhymes] with GitHub
+post comments integrated as described by [Dave Compton] in his blog post
+[Using Github comments in a Jekyll blog].
+
+## Usage
+
+The intended usage is as a remote theme:
+
+**_config.yml**
+
+```
+title: My Super Duper Blog
+remote_theme: jtheriault/bulma-clean-github-comments-theme
+```
+
+although forking is always a possibility ¯\_(ツ)_/¯
+
+[bulma-clean-theme]: https://github.com/chrisrhymes/bulma-clean-theme
+[CS Rhymes]: https://github.com/chrisrhymes
+[Dave Compton]: https://dc25.github.io/myBlog/
+[Using Github comments in a Jekyll blog]: https://dc25.github.io/myBlog/2017/06/24/using-github-comments-in-a-jekyll-blog.html
+
 # bulma-clean-theme
 
 [![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
 ![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
 
-This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern-looking site to start with. 
+This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern-looking site to start with.
 
 The theme uses [Alpine.js](https://github.com/alpinejs/alpine) for its interactive components, such as mobile navbar and notifications.
 
@@ -89,7 +113,7 @@ You can also set the height of the hero by providing a Bulma hero height class i
 
 #### Table Of Contents
 
-**New in 0.5.8** - If you want to display a table of contents (toc) then add `toc: true` to your page's front matter. You can customise the default table of contents title by setting `toc_title: My Custom Title` in the page's front matter. 
+**New in 0.5.8** - If you want to display a table of contents (toc) then add `toc: true` to your page's front matter. You can customise the default table of contents title by setting `toc_title: My Custom Title` in the page's front matter.
 
 **New in 0.10.3** - If you would prefer to display the contents in the menubar at the side of the page, then use `menubar_toc: true` instead of `toc: true`. This will also override the page's `menubar` setting.
 
@@ -110,7 +134,7 @@ You can also set the height of the hero by providing a Bulma hero height class i
 
 #### Post Excerpt and Summary
 
-By default, the blog page and the latest posts will use the automatically generated post excerpt. If you would like to override this you can set the summary in the post's front matter. 
+By default, the blog page and the latest posts will use the automatically generated post excerpt. If you would like to override this you can set the summary in the post's front matter.
 
 ```yaml
 layout: post
@@ -184,7 +208,7 @@ For the top navigation, create a navigation.yml file in the `_data` directory wi
   link: /page-1/
 - name: Blog
   link: /blog/
-  dropdown: 
+  dropdown:
     - name: Page 2
       link: /page-2/
 ```
@@ -212,7 +236,7 @@ You can overwrite any of the [Bulma initial variables](http://versions.bulma.io/
 
 #### Theme Color Meta Tag
 
-If you want to update the theme color meta tag then set `theme_color: '#333333'` in your `_config.yml` file. 
+If you want to update the theme color meta tag then set `theme_color: '#333333'` in your `_config.yml` file.
 
 ### Sidebar Visibility
 
@@ -220,14 +244,14 @@ If you want to update the theme color meta tag then set `theme_color: '#333333'`
 
 ### Menubar
 
-**New in 0.3** - The menubar gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the frontmatter. 
+**New in 0.3** - The menubar gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the frontmatter.
 
 ```yaml
 show_sidebar: false
 menubar: example_menu
 ```
 
-You will probably want to disable `show_sidebar`. Otherwise there will be little room for the page content. 
+You will probably want to disable `show_sidebar`. Otherwise there will be little room for the page content.
 
 #### Creating a menubar data file
 
@@ -241,7 +265,7 @@ Create a data file in the `_data` directory and use the following format (if usi
     - name: Pages
       link: #
       items:
-        - name: Page With Sidebar 
+        - name: Page With Sidebar
           link: /page-1/
         - name: Page Without Sidebar
           link: /page-2/
@@ -267,7 +291,7 @@ You may make multiple menus in the same file, separated by labels.
     - name: Parent Item
       link: /parent-item/
       items:
-        - name: Sublink 
+        - name: Sublink
           link: /sublink/
         - name: Sublink 2
           link: /sublink2/
@@ -279,7 +303,7 @@ You may make multiple menus in the same file, separated by labels.
 
 ### Tabs
 
-**New in 0.4** - `tabs` gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the front matter. 
+**New in 0.4** - `tabs` gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the front matter.
 
 ```yaml
 title: Page with tabs
@@ -290,7 +314,7 @@ menubar: example_menu
 tabs: example_tabs
 ```
 
-Tabs can be used in conjunction with menubar and/or sidebar if you wish. 
+Tabs can be used in conjunction with menubar and/or sidebar if you wish.
 
 #### Creating a tabs data file
 
@@ -317,7 +341,7 @@ items:
 
 #### Settings
 
-You can control the alignment, style, and size of tabs by using the relevant [Bulma tabs classes](https://bulma.io/documentation/components/tabs/). 
+You can control the alignment, style, and size of tabs by using the relevant [Bulma tabs classes](https://bulma.io/documentation/components/tabs/).
 
 #### Active Tab Highlighting
 
@@ -357,7 +381,7 @@ icon="false" %}
 
 ### Tags
 
-To include a tag use the following include. 
+To include a tag use the following include.
 
 ```liquid
 {% include tag.html tag="The tag text" %}
@@ -369,7 +393,7 @@ You can overwrite the default style (is-primary) by passing in the style in the 
 {% include tag.html tag="The tag text" style="is-light" %}
 ```
 
-### Google Analytics 
+### Google Analytics
 
 **New in 0.2** - To enable Google Analytics add `google_analytics: UA-xxxxxxxx` to your `_config.yml` replacing the UA-xxxxxxxx with your Google Analytics property.
 
@@ -398,11 +422,11 @@ footer_menu: example_footer_menu
 
 ### Products
 
-**New in 0.5** - Now you can add simple product pages to your site using collections. 
+**New in 0.5** - Now you can add simple product pages to your site using collections.
 
 #### Product pages
 
-Start by creating a `_products` directory to hold your product pages and create a new page for each product, such as `product1.md`. In the front matter for this page you can set the standard settings, such as your title, subtitle, description (for meta-description), hero_image, as well as the additional product settings such as price, product_code, image, features, and rating. 
+Start by creating a `_products` directory to hold your product pages and create a new page for each product, such as `product1.md`. In the front matter for this page you can set the standard settings, such as your title, subtitle, description (for meta-description), hero_image, as well as the additional product settings such as price, product_code, image, features, and rating.
 
 ```yaml
 title: Product 1 Name
@@ -423,20 +447,20 @@ features:
 rating: 3
 ```
 
-The text you write for the page content will be displayed as the product description. 
+The text you write for the page content will be displayed as the product description.
 
-Next, add the following to your `_config.yml` to use collections to process the product pages and output them as individual pages. 
+Next, add the following to your `_config.yml` to use collections to process the product pages and output them as individual pages.
 
 ```yaml
 collections:
-  products: 
+  products:
     output: true
     layout: product
     image: https://via.placeholder.com/800x600
     show_sidebar: false
 ```
 
-You can also set default product page values here if you like, such as the layout or image. 
+You can also set default product page values here if you like, such as the layout or image.
 
 #### Product Reviews
 
@@ -449,21 +473,21 @@ To add reviews to your product page, create a `reviews` directory in the `_data`
   date: 2019-01-01
   avatar: https://bulma.io/images/placeholders/128x128.png
   description: >
-    The product worked really well. I would recommend this to most people to use. Delivery was quick and reasonable. 
-    Would recommend this to my friends. 
+    The product worked really well. I would recommend this to most people to use. Delivery was quick and reasonable.
+    Would recommend this to my friends.
 - name: Mrs R E View
   rating: 5
   title: Nice, really liked this
   date: 2019-02-02
   description: >
-    The product worked exactly as described. 
+    The product worked exactly as described.
 ```
 
 If you don't want to display an avatar image then a default user icon will be displayed. If you don't want to display a rating then omit it from the yaml file.
 
 #### Product Category Page
 
-To create a page listing your products you will need to create a product category page. Create a page, for example `products.md`, with the `layout: product-category` in the frontmatter. You can set the sort order of the products using `sort: title` to sort by the title, or by any setting in your product pages, such as price, rating or any custom frontmatter tags you wish to set. 
+To create a page listing your products you will need to create a product category page. Create a page, for example `products.md`, with the `layout: product-category` in the frontmatter. You can set the sort order of the products using `sort: title` to sort by the title, or by any setting in your product pages, such as price, rating or any custom frontmatter tags you wish to set.
 
 ```yaml
 title: Products
@@ -479,13 +503,13 @@ sort: title
 
 ### Callouts
 
-**New in 0.5.4** - You can now add callouts to a page to make a landing page style layout. 
+**New in 0.5.4** - You can now add callouts to a page to make a landing page style layout.
 
 * [Example of page with callouts - notice the 'calls to action' below the header.](http://www.csrhymes.com/bulma-clean-theme/landing/)
 
 #### Create a callout data file
 
-Create a data file following the below format. The style is for classes to set the background colour and sizes you would like to use of the Bulma hero container for the callouts. 
+Create a data file following the below format. The style is for classes to set the background colour and sizes you would like to use of the Bulma hero container for the callouts.
 
 **New in 0.5.7** - You can set the height of the callouts in the data file, such as `is-small`, `is-medium`, or `is-large`. If unset it will be `is-medium` by default.
 
@@ -502,7 +526,7 @@ items:
     description: >
       The example description text goes here and can be multiple lines.
 
-      For example, such as this. 
+      For example, such as this.
     call_to_action_name: Call to action 1
     call_to_action_link: /page-1/
 ```
@@ -524,11 +548,11 @@ The default favicon path is `{{ site.baseurl }}/favicon.png` but you can overwri
 
 ### Showcases
 
-Showcases allow you to display your work to others using a simple layout. 
+Showcases allow you to display your work to others using a simple layout.
 
 #### Creating A Showcase Datafile
 
-Create a datafile in your site's `_data` directory in the following format. Subtitle, features and tags are not required. 
+Create a datafile in your site's `_data` directory in the following format. Subtitle, features and tags are not required.
 
 The description text accepts Markdown and is run through the markdownify filter on the page.
 
@@ -541,7 +565,7 @@ To change the default styles of the features, set `features_styles`. This uses t
 ```yaml
 intro: |-
   This is some introduction text for the showcases.
-  
+
   ## Example Heading
   It can convert Markdown format
 
@@ -564,7 +588,7 @@ items:
 
 #### Displaying the Showcase
 
-Set the showcase in the page's front matter to be the name of the showcase data file without the extension. This gives you the ability to create multiple showcases to be used on different pages. 
+Set the showcase in the page's front matter to be the name of the showcase data file without the extension. This gives you the ability to create multiple showcases to be used on different pages.
 
 ```yaml
 title: Showcase
@@ -607,7 +631,7 @@ If you would like to create a page to thank your sponsors then create a data fil
 ```
 
 The `tier_name` and `description` are required. The `size` is not required, but can be overwritten to 'large' or 'small' to increase or decrease the size of the box and the text size.
- 
+
 The sponsors require a name, but not a profile link.
 
 #### Displaying the Sponsors
@@ -626,7 +650,7 @@ Display a simple image gallery on a page, with image descriptions.
 
 #### Create an image gallery data file
 
-Start by creating a gallery data file using the below format, for example `my_gallery.yml`. 
+Start by creating a gallery data file using the below format, for example `my_gallery.yml`.
 
 ```yaml
 - title: Image Gallery Title
@@ -644,8 +668,8 @@ Start by creating a gallery data file using the below format, for example `my_ga
       ratio: is-4by3
 ```
 
-* If a ratio is not provided it will default to 16 by 9. Use [Bulma image](https://bulma.io/documentation/elements/image/) classes to define the image ratio required. 
-* The description can be plaintext or it can be Markdown if required. 
+* If a ratio is not provided it will default to 16 by 9. Use [Bulma image](https://bulma.io/documentation/elements/image/) classes to define the image ratio required.
+* The description can be plaintext or it can be Markdown if required.
 * The alt will be used as the image's alt text.
 * The large_link displays in a modal when the image is clicked.
 
@@ -661,18 +685,18 @@ gallery: my_gallery
 
 ### Disqus
 
-Disqus comments are available for posts. To be able to use them, you need to set your disqus shortname in `_config.yml`. 
+Disqus comments are available for posts. To be able to use them, you need to set your disqus shortname in `_config.yml`.
 ```
-disqus.shortname=<example-com.disqus.com>  
+disqus.shortname=<example-com.disqus.com>
 ```
 
-Need help finding your Disqus Shortname?  [See this helpful post by Disqus on the matter.](https://help.disqus.com/en/articles/1717111-what-s-a-shortname)  
+Need help finding your Disqus Shortname?  [See this helpful post by Disqus on the matter.](https://help.disqus.com/en/articles/1717111-what-s-a-shortname)
 
-Then you need to set your Jekyll environment to production: 
+Then you need to set your Jekyll environment to production:
 
-```JEKYLL_ENV=production bundle exec jekyll build```. 
+```JEKYLL_ENV=production bundle exec jekyll build```.
 
-Comments are enabled by default. If you want to disable them, set in the front matter this setting: 
+Comments are enabled by default. If you want to disable them, set in the front matter this setting:
 
 ```markdown
 comments: false
