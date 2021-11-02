@@ -12,6 +12,8 @@ $modal-content-width: 800px;
 @import "../node_modules/bulma/bulma.sass";
 $hero-darken: $dark !default;
 
+@import "gh-comments";
+@import "gh-code";
 @import "layout";
 @import "syntax";
 @import "showcase";
